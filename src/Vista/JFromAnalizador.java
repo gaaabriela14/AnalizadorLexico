@@ -161,4 +161,5 @@ public class JFromAnalizador extends javax.swing.JFrame {
     private javax.swing.JTextField jTFAnalizador;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
 }

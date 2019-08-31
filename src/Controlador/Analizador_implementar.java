@@ -6,6 +6,7 @@
 package Controlador;
 
 import Modelo.FlujoCaracteres;
+import Modelo.Lexema;
 
 /**
  *
@@ -18,11 +19,17 @@ public class Analizador_implementar {
 
     char[] car;
 
-    public void inicio(FlujoCaracteres flujo) {
+      public Lexema inicio(FlujoCaracteres flujo) {
         cont = flujo.getPosActual();
         car = flujo.getCaracteres();
         aceptada = false;
         q0();
+         if (aceptada) {
+            AnalizadorLexico.flujo.setPosActual(cont);
+            return new Lexema("implementar", "estructura de datos");
+        } else {
+            return null;
+        }
     }
 
     public void q0() {

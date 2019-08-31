@@ -6,6 +6,7 @@
 package Controlador;
 
 import Modelo.FlujoCaracteres;
+
 import Modelo.Lexema;
 
 /**
@@ -30,6 +31,7 @@ public class Analizador_protegido {
         } else {
             return null;
         }
+
     }
 
     public void q0() {

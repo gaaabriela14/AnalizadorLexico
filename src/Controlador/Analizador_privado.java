@@ -6,6 +6,7 @@
 package Controlador;
 
 import Modelo.FlujoCaracteres;
+
 import Modelo.Lexema;
 
 /**

@@ -24,9 +24,11 @@ public class Analizador_cadena {
         car = flujo.getCaracteres();
         aceptada = false;
         q0();
-        if (aceptada) {
+
+         if (aceptada== true) {
             AnalizadorLexico.flujo.setPosActual(cont);
-            return new Lexema("cadena", "tipo de dato");
+
+            return new Lexema("cadena", "tipo dato");
         } else {
             return null;
         }
@@ -138,4 +140,6 @@ public class Analizador_cadena {
             }
         }
     }
+
+
 }

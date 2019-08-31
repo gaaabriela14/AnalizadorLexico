@@ -7,7 +7,6 @@ package Controlador;
 
 import Modelo.FlujoCaracteres;
 import Modelo.Lexema;
-
 /**
  *
  * @author GABRIELA
@@ -30,6 +29,7 @@ public class Analizador_decimal {
         } else {
             return null;
         }
+
     }
 
     public void q0() {

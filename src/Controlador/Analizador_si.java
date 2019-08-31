@@ -32,6 +32,7 @@ public class Analizador_si {
         }
    }
 
+
     public void q0() {
 
         if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/

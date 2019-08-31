@@ -18,6 +18,9 @@ public class Analizador_cambiar {
 
     char[] car;
 
+  
+
+
     public Lexema inicio(FlujoCaracteres flujo) {
         cont = flujo.getPosActual();
         car = flujo.getCaracteres();
@@ -29,6 +32,7 @@ public class Analizador_cambiar {
         } else {
             return null;
         }
+
     }
 
     public void q0() {

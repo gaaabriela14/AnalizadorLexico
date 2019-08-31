@@ -15,7 +15,7 @@ import Modelo.Lexema;
 public class Analizador_implementar {
 
     int cont;
-    boolean aceptada;/*para guardar los caratcteres y los va ir separando*/
+    boolean aceptada;
 
     char[] car;
 
@@ -34,11 +34,11 @@ public class Analizador_implementar {
 
     public void q0() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'i') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'i') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q1();
 
@@ -52,11 +52,11 @@ public class Analizador_implementar {
 
     public void q1() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'm') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'm') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q2();
 
@@ -70,11 +70,11 @@ public class Analizador_implementar {
 
     public void q2() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'p') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'p') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q3();
 
@@ -88,11 +88,11 @@ public class Analizador_implementar {
 
     public void q3() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'l') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'l') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q4();
 
@@ -106,11 +106,11 @@ public class Analizador_implementar {
 
     public void q4() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'e') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'e') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q5();
 
@@ -124,11 +124,11 @@ public class Analizador_implementar {
 
     public void q5() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'm') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'm') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 qF();
 
@@ -142,11 +142,11 @@ public class Analizador_implementar {
 
     public void q6() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'e') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'e') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q7();
 
@@ -160,11 +160,11 @@ public class Analizador_implementar {
 
     public void q7() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'n') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'n') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q8();
 
@@ -178,11 +178,11 @@ public class Analizador_implementar {
 
     public void q8() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 't') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 't') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q9();
 
@@ -196,11 +196,11 @@ public class Analizador_implementar {
 
     public void q9() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'a') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'a') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 qF();
 
@@ -213,10 +213,9 @@ public class Analizador_implementar {
     }
 
     public void qF() {
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'r') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
-
+            if (car[cont] == 'r') {
                 aceptada = true;
                 cont++;
                 qF();

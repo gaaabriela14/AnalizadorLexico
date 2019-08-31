@@ -15,7 +15,7 @@ import Modelo.Lexema;
 public class Analizador_corto {
 
     int cont;
-    boolean aceptada;/*para guardar los caratcteres y los va ir separando*/
+    boolean aceptada;
 
     char[] car;
 
@@ -24,7 +24,7 @@ public class Analizador_corto {
         car = flujo.getCaracteres();
         aceptada = false;
         q0();
-         if (aceptada) {
+        if (aceptada) {
             AnalizadorLexico.flujo.setPosActual(cont);
             return new Lexema("corto", "tipo de dato");
         } else {
@@ -34,11 +34,11 @@ public class Analizador_corto {
 
     public void q0() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'c') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'c') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q1();
 
@@ -52,11 +52,11 @@ public class Analizador_corto {
 
     public void q1() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'o') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'o') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q2();
 
@@ -70,11 +70,11 @@ public class Analizador_corto {
 
     public void q2() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'r') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'r') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q3();
 
@@ -88,11 +88,11 @@ public class Analizador_corto {
 
     public void q3() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 't') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 't') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 qF();
 
@@ -105,9 +105,9 @@ public class Analizador_corto {
     }
 
     public void qF() {
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'o') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'o') {
 
                 aceptada = true;
                 cont++;

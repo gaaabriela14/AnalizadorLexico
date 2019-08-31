@@ -15,7 +15,7 @@ import Modelo.Lexema;
 public class Analizador_sumaCombinada {
 
     int cont;
-    boolean aceptada;/*para guardar los caratcteres y los va ir separando*/
+    boolean aceptada;
 
     char[] car;
 
@@ -34,11 +34,11 @@ public class Analizador_sumaCombinada {
 
     public void q0() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == '=') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == '=') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 qF();
 
@@ -51,10 +51,9 @@ public class Analizador_sumaCombinada {
     }
 
     public void qF() {
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == '+') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
-
+            if (car[cont] == '+') {
                 aceptada = true;
                 cont++;
                 qF();

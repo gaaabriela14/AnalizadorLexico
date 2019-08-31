@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  *
- * @author Mauricio
+ * @author GABRIELA
  */
 public class AnalizadorLexico {
 
@@ -28,7 +28,6 @@ public class AnalizadorLexico {
 
         while (flujo.getPosActual() < flujo.getCaracteres().length) {
 
-            // ----------------------------------
             Analizador_bit();
             Analizador_cadena();
             Analizador_cambiar();
@@ -278,8 +277,8 @@ public class AnalizadorLexico {
             listLexema.add(lexe);
         }
     }
-    
-      public void Analizador_restoCombinada() {
+
+    public void Analizador_restoCombinada() {
         Analizador_restoCombinada roc = new Analizador_restoCombinada();
         lexe = roc.inicio(flujo);
         if (lexe != null) {

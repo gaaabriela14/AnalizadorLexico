@@ -15,8 +15,7 @@ import Modelo.Lexema;
 public class Analizador_doble {
 
     int cont;
-    boolean aceptada;/*para guardar los caratcteres y los va ir separando*/
-
+    boolean aceptada;
     char[] car;
 
     public Lexema inicio(FlujoCaracteres flujo) {
@@ -24,7 +23,7 @@ public class Analizador_doble {
         car = flujo.getCaracteres();
         aceptada = false;
         q0();
-         if (aceptada) {
+        if (aceptada) {
             AnalizadorLexico.flujo.setPosActual(cont);
             return new Lexema("doble", "tipo de dato");
         } else {
@@ -34,11 +33,11 @@ public class Analizador_doble {
 
     public void q0() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'd') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'd') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q1();
 
@@ -52,11 +51,11 @@ public class Analizador_doble {
 
     public void q1() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'o') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'o') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q2();
 
@@ -70,11 +69,11 @@ public class Analizador_doble {
 
     public void q2() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'b') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'b') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q3();
 
@@ -88,11 +87,11 @@ public class Analizador_doble {
 
     public void q3() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'l') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'l') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 qF();
 
@@ -105,9 +104,9 @@ public class Analizador_doble {
     }
 
     public void qF() {
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'e') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'e') {
 
                 aceptada = true;
                 cont++;

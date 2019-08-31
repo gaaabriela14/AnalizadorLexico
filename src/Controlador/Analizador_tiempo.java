@@ -13,12 +13,13 @@ import Modelo.Lexema;
  * @author GABRIELA
  */
 public class Analizador_tiempo {
-     int cont;
-    boolean aceptada;/*para guardar los caratcteres y los va ir separando*/
+
+    int cont;
+    boolean aceptada;
 
     char[] car;
 
-   public Lexema inicio(FlujoCaracteres flujo) {
+    public Lexema inicio(FlujoCaracteres flujo) {
         cont = flujo.getPosActual();
         car = flujo.getCaracteres();
         aceptada = false;
@@ -33,11 +34,11 @@ public class Analizador_tiempo {
 
     public void q0() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 't') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 't') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q1();
 
@@ -51,11 +52,11 @@ public class Analizador_tiempo {
 
     public void q1() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'i') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'i') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q2();
 
@@ -69,11 +70,11 @@ public class Analizador_tiempo {
 
     public void q2() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'e') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'e') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q3();
 
@@ -87,11 +88,11 @@ public class Analizador_tiempo {
 
     public void q3() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'm') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'm') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q4();
 
@@ -103,13 +104,13 @@ public class Analizador_tiempo {
         }
     }
 
-        public void q4() {
+    public void q4() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'p') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'p') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 qF();
 
@@ -120,10 +121,11 @@ public class Analizador_tiempo {
             }
         }
     }
-    public void qF() {
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
 
-            if (car[cont] == 'o') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+    public void qF() {
+        if (cont < car.length) {
+
+            if (car[cont] == 'o') {
 
                 aceptada = true;
                 cont++;

@@ -13,17 +13,18 @@ import Modelo.Lexema;
  * @author GABRIELA
  */
 public class Analizador_por {
-      int cont;
-    boolean aceptada;/*para guardar los caratcteres y los va ir separando*/
+
+    int cont;
+    boolean aceptada;
 
     char[] car;
 
-  public Lexema inicio(FlujoCaracteres flujo) {
+    public Lexema inicio(FlujoCaracteres flujo) {
         cont = flujo.getPosActual();
         car = flujo.getCaracteres();
         aceptada = false;
         q0();
-         if (aceptada) {
+        if (aceptada) {
             AnalizadorLexico.flujo.setPosActual(cont);
             return new Lexema("por", "ciclos o bucles");
         } else {
@@ -33,11 +34,11 @@ public class Analizador_por {
 
     public void q0() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'p') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'p') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q1();
 
@@ -51,12 +52,10 @@ public class Analizador_por {
 
     public void q1() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'o') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
-
-                cont++;/*incrememnto mi contador*/
-
+            if (car[cont] == 'o') {
+                cont++;
                 qF();
 
             } else {
@@ -68,10 +67,9 @@ public class Analizador_por {
     }
 
     public void qF() {
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'r') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
-
+            if (car[cont] == 'r') {
                 aceptada = true;
                 cont++;
                 qF();

@@ -19,12 +19,12 @@ public class Analizador_dw {
 
     char[] car;
 
-     public Lexema inicio(FlujoCaracteres flujo) {
+    public Lexema inicio(FlujoCaracteres flujo) {
         cont = flujo.getPosActual();
         car = flujo.getCaracteres();
         aceptada = false;
         q0();
-         if (aceptada) {
+        if (aceptada) {
             AnalizadorLexico.flujo.setPosActual(cont);
             return new Lexema("dw()", "ciclos o bucles");
         } else {
@@ -34,11 +34,10 @@ public class Analizador_dw {
 
     public void q0() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
+            if (car[cont] == 'd') {
 
-            if (car[cont] == 'd') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
-
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q1();
 
@@ -52,11 +51,11 @@ public class Analizador_dw {
 
     public void q1() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'w') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'w') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q2();
 
@@ -70,11 +69,11 @@ public class Analizador_dw {
 
     public void q2() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == '(') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == '(') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 qF();
 
@@ -87,9 +86,9 @@ public class Analizador_dw {
     }
 
     public void qF() {
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == ')') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == ')') {
 
                 aceptada = true;
                 cont++;

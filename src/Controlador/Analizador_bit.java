@@ -24,15 +24,23 @@ public class Analizador_bit {
         car = flujo.getCaracteres();
         aceptada = false;
         q0();
+
          if (aceptada== true) {
             AnalizadorLexico.flujo.setPosActual(cont);
 
             return new Lexema("bit", "tipo dato");
         } else {
+
+        
+        if(aceptada){
+            AnalizadorLexico.flujo.setPosActual(cont);
+            return new Lexema("bit", "tipo de dato");
+        }else{
+
             return null;
         }
     }
-
+    }
     public void q0() {
 
         if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/

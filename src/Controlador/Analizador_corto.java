@@ -7,6 +7,8 @@ package Controlador;
 
 import Modelo.FlujoCaracteres;
 
+import Modelo.Lexema;
+
 /**
  *
  * @author GABRIELA
@@ -18,11 +20,18 @@ public class Analizador_corto {
 
     char[] car;
 
-    public void inicio(FlujoCaracteres flujo) {
+    public Lexema inicio(FlujoCaracteres flujo) {
         cont = flujo.getPosActual();
         car = flujo.getCaracteres();
         aceptada = false;
         q0();
+         if (aceptada) {
+            AnalizadorLexico.flujo.setPosActual(cont);
+            return new Lexema("corto", "tipo de dato");
+        } else {
+            return null;
+        }
+
     }
 
     public void q0() {

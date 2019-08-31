@@ -24,6 +24,7 @@ public class Analizador_cadena {
         car = flujo.getCaracteres();
         aceptada = false;
         q0();
+
          if (aceptada== true) {
             AnalizadorLexico.flujo.setPosActual(cont);
 
@@ -139,5 +140,6 @@ public class Analizador_cadena {
             }
         }
     }
+
 
 }

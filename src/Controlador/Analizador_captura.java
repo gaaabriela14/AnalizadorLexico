@@ -35,11 +35,10 @@ public class Analizador_captura {
 
     public void q0() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'c') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
-
-                cont++;/*incrememnto mi contador*/
+            if (car[cont] == 'c') {
+                cont++;
 
                 q1();
 
@@ -53,11 +52,10 @@ public class Analizador_captura {
 
     public void q1() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
+            if (car[cont] == 'a') {
 
-            if (car[cont] == 'a') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
-
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q2();
 
@@ -87,11 +85,11 @@ public class Analizador_captura {
     }
         public void q3() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 't') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 't') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q4();
 
@@ -104,11 +102,11 @@ public class Analizador_captura {
     }
            public void q4() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'u') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'u') {
 
-                cont++;/*incrememnto mi contador*/
+                cont++;
 
                 q5();
 

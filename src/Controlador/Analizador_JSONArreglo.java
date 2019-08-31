@@ -15,7 +15,7 @@ import Modelo.Lexema;
 public class Analizador_JSONArreglo {
 
     int cont;
-    boolean aceptada;/*para guardar los caratcteres y los va ir separando*/
+    boolean aceptada;
 
     char[] car;
 
@@ -35,9 +35,9 @@ public class Analizador_JSONArreglo {
 
     public void q0() {
 
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
+        if (cont < car.length) {
 
-            if (car[cont] == 'J') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'J') {
 
                 cont++;/*incrememnto mi contador*/
 

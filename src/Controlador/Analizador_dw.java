@@ -12,7 +12,7 @@ import Modelo.Lexema;
  *
  * @author GABRIELA
  */
-public class Analizador_decimal {
+public class Analizador_dw {
 
     int cont;
     boolean aceptada;/*para guardar los caratcteres y los va ir separando*/
@@ -26,7 +26,7 @@ public class Analizador_decimal {
         q0();
          if (aceptada) {
             AnalizadorLexico.flujo.setPosActual(cont);
-            return new Lexema("decimal", "tipo de dato");
+            return new Lexema("dw()", "ciclos o bucles");
         } else {
             return null;
         }
@@ -54,7 +54,7 @@ public class Analizador_decimal {
 
         if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
 
-            if (car[cont] == 'e') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == 'w') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
 
                 cont++;/*incrememnto mi contador*/
 
@@ -72,61 +72,7 @@ public class Analizador_decimal {
 
         if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
 
-            if (car[cont] == 'c') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
-
-                cont++;/*incrememnto mi contador*/
-
-                q3();
-
-            } else {
-
-                aceptada = false;
-
-            }
-        }
-    }
-
-    public void q3() {
-
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
-
-            if (car[cont] == 'i') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
-
-                cont++;/*incrememnto mi contador*/
-
-                q4();
-
-            } else {
-
-                aceptada = false;
-
-            }
-        }
-    }
-
-    public void q4() {
-
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
-
-            if (car[cont] == 'm') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
-
-                cont++;/*incrememnto mi contador*/
-
-                q5();
-
-            } else {
-
-                aceptada = false;
-
-            }
-        }
-    }
-
-    public void q5() {
-
-        if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
-
-            if (car[cont] == 'a') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == '(') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
 
                 cont++;/*incrememnto mi contador*/
 
@@ -143,7 +89,7 @@ public class Analizador_decimal {
     public void qF() {
         if (cont < car.length) {/*cuantos espacios tiene mi arreglo*/
 
-            if (car[cont] == 'l') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
+            if (car[cont] == ')') {/*el arreglo car en el contador 0 lo vamos a comparar si es = a*/
 
                 aceptada = true;
                 cont++;
@@ -156,4 +102,5 @@ public class Analizador_decimal {
             }
         }
     }
+
 }

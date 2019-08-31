@@ -32,6 +32,32 @@ public class AnalizadorLexico {
             Analizador_bit();
             Analizador_cadena();
             Analizador_cambiar();
+            Analizador_caracter();
+            Analizador_clase();
+            Analizador_corto();
+            Analizador_decimal();
+            Analizador_diviCombinada();
+            Analizador_doble();
+            Analizador_dw();
+            Analizador_entero();
+            Analizador_estado();
+            Analizador_extender();
+            Analizador_implementar();
+            Analizador_interfaz();
+            Analizador_largo();
+            Analizador_mapa();
+            Analizador_mientras();
+            Analizador_multiCombinada();
+            Analizador_por();
+            Analizador_privado();
+            Analizador_publico();
+            Analizador_protegido();
+            Analizador_restaCombinada();
+            Analizador_sumaCombinada();
+            Analizador_restoCombinada();
+            Analizador_restas();
+            Analizador_si();
+            Analizador_tiempo();
 
         }
 
@@ -221,4 +247,59 @@ public class AnalizadorLexico {
         }
     }
 
+    public void Analizador_diviCombinada() {
+        Analizador_diviCombinada dc = new Analizador_diviCombinada();
+        lexe = dc.inicio(flujo);
+        if (lexe != null) {
+            listLexema.add(lexe);
+        }
+    }
+
+    public void Analizador_multiCombinada() {
+        Analizador_multiCombinada mc = new Analizador_multiCombinada();
+        lexe = mc.inicio(flujo);
+        if (lexe != null) {
+            listLexema.add(lexe);
+        }
+    }
+
+    public void Analizador_sumaCombinada() {
+        Analizador_sumaCombinada sc = new Analizador_sumaCombinada();
+        lexe = sc.inicio(flujo);
+        if (lexe != null) {
+            listLexema.add(lexe);
+        }
+    }
+
+    public void Analizador_restaCombinada() {
+        Analizador_restaCombinada rc = new Analizador_restaCombinada();
+        lexe = rc.inicio(flujo);
+        if (lexe != null) {
+            listLexema.add(lexe);
+        }
+    }
+    
+      public void Analizador_restoCombinada() {
+        Analizador_restoCombinada roc = new Analizador_restoCombinada();
+        lexe = roc.inicio(flujo);
+        if (lexe != null) {
+            listLexema.add(lexe);
+        }
+    }
+
+    public void Analizador_restas() {
+        Analizador_restas r = new Analizador_restas();
+        lexe = r.inicio(flujo);
+        if (lexe != null) {
+            listLexema.add(lexe);
+        }
+    }
+
+    public void Analizador_sumas() {
+        Analizador_sumas s = new Analizador_sumas();
+        lexe = s.inicio(flujo);
+        if (lexe != null) {
+            listLexema.add(lexe);
+        }
+    }
 }
